@@ -23,6 +23,21 @@ With our data prepared, we can utilize TensorFlow's built-in tokenizer to perfor
 ### 🔳Feature Extraction
 Neural networks require numerical representations of sentences to function. To achieve this, we perform feature extraction by mapping each word to its index and creating a matrix that corresponds to its category (intent).
 
+### 🔳One-Hot Encoding
+For Categorical Data, we apply One-Hot Encoding.
+
+### 🔳Model Building
+The initial step in building a model involves setting hyperparameters, which are predefined settings specified before model training. These include parameters such as the number of epochs, embedding dimensions, vocabulary size, and target length. Adjusting these parameters can enhance the model's performance.
+
+Next, we define our neural network's architecture with TensorFlow. For intent recognition, recurrent neural networks (RNNs) and their variant, long short-term memory (LSTM) networks, are commonly used due to their ability to effectively process sequential data like sentences. Alternatively, pre-trained models such as BERT or GPT can be utilized for superior performance.
+
+In this instance, we are implementing an RNN using the 'Sequential' model from TensorFlow's Keras API. This model includes an embedding layer, an LSTM layer for handling sequences, and two dense layers for classification. The model summary is shown below.
+
+### 🔳Training
+With the model architecture set up, we can begin training the network with our labeled dataset. During training, the model fine-tunes its internal parameters to reduce the discrepancy between its predicted intents and the actual intents in the training data. This process includes forward propagation, where the model generates predictions, and backward propagation, where the model's parameters are adjusted based on the prediction errors.
+In this step, we train the model by fitting it to the padded sequences and their corresponding categorical sequences. The model fine-tunes its internal parameters to minimize the gap between its predicted intents and the actual intents in the training data. Training occurs over a defined number of epochs and may halt early if there is no improvement in loss after 4 consecutive epochs.
+
+
 
 
 
