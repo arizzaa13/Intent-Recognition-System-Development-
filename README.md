@@ -4,7 +4,7 @@ Colab Link - https://colab.research.google.com/drive/1UZBdI-DbiquuSMqZgV9k1btfAP
 # Intent-Recognition-System-Development-
 The primary goal of this project is to design and implement an intent recognition system capable of accurately understanding user intents conveyed through natural language input. The system should be able to classify user queries or commands into predefined categories or intents, enabling effective interaction between users and the system.
 
-# ✔ To perform Intent Recognition, these are the steps:
+## ✔ To perform Intent Recognition, these are the steps:
 
 🔳Import Libraries:
 
@@ -16,6 +16,10 @@ The primary goal of this project is to design and implement an intent recognitio
 But firstly, we need to prepare data in a format {intent : text data}
 
 🔳Tokenization and Embedding - With our data prepared, we can utilize TensorFlow's built-in tokenizer to perform both tokenization and embedding efficiently.
+
+🔳Feature Extraction - Neural networks require numerical representations of sentences to function. To achieve this, we perform feature extraction by mapping each word to its index and creating a matrix that corresponds to its category (intent).
+
+
 
 
 
