@@ -37,6 +37,11 @@ In this instance, we are implementing an RNN using the 'Sequential' model from T
 With the model architecture set up, we can begin training the network with our labeled dataset. During training, the model fine-tunes its internal parameters to reduce the discrepancy between its predicted intents and the actual intents in the training data. This process includes forward propagation, where the model generates predictions, and backward propagation, where the model's parameters are adjusted based on the prediction errors.
 In this step, we train the model by fitting it to the padded sequences and their corresponding categorical sequences. The model fine-tunes its internal parameters to minimize the gap between its predicted intents and the actual intents in the training data. Training occurs over a defined number of epochs and may halt early if there is no improvement in loss after 4 consecutive epochs.
 
+### 🔳Evaluate
+To verify our model's performance, we test it with new, unseen data and their corresponding labels. By providing text inputs along with their intents, we evaluate the model's accuracy, a process known as model evaluation. This crucial step helps determine the model's accuracy and reveals if it is overfitting or underfitting.
+
+### 🔳Predict
+After completing the training, our model is ready to make predictions on new, unseen sentences. When provided with an input sentence, the model processes it using the parameters it has learned and generates a probability distribution across the potential intents. The intent with the highest probability is taken as the predicted intent.
 
 
 
