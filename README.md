@@ -10,6 +10,15 @@ The primary goal of this project is to design and implement an intent recognitio
 
 🔳Data Collection:
 
+🔳Data Cleaning - As We can’t directly process this data. First, we have to clean it, this usually includes, removing punctuation marks or anything which might produce unwanted results. This is also done to reduce number of tokens, as we don’t want to tokenize everything.
+
+🔳Data Preprocessing - Next step is to preprocess the data to make it suitable for training a neural network. This usually involves tokenization, which means breaking down each input sentence into individual words or sub-words.
+But firstly, we need to prepare data in a format {intent : text data}
+
+🔳Tokenization and Embedding - With our data prepared, we can utilize TensorFlow's built-in tokenizer to perform both tokenization and embedding efficiently.
+
+
+
 
 
 
